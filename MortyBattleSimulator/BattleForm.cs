@@ -14,7 +14,7 @@ namespace MortyBattleSimulator
     {
         PictureBox[] playerBoxes;
         Dictionary<string, int> attack = new Dictionary<string, int>();
-
+        
 
         public BattleForm(PictureBox[] playerBoxesFromPreviousForm)
         {

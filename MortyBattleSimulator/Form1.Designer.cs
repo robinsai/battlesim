@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.startButton = new System.Windows.Forms.Button();
+            this.player1Ready = new System.Windows.Forms.CheckBox();
             this.versusPicBox = new System.Windows.Forms.PictureBox();
             this.player2PicBox = new System.Windows.Forms.PictureBox();
             this.player1PicBox = new System.Windows.Forms.PictureBox();
-            this.startButton = new System.Windows.Forms.Button();
             this.zombiePicBox = new System.Windows.Forms.PictureBox();
             this.ghostPicBox = new System.Windows.Forms.PictureBox();
             this.OGPicBox = new System.Windows.Forms.PictureBox();
             this.karatePicBox = new System.Windows.Forms.PictureBox();
             this.hippiePicBox = new System.Windows.Forms.PictureBox();
             this.scruffyPicBox = new System.Windows.Forms.PictureBox();
-            this.player1Ready = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.versusPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1PicBox)).BeginInit();
@@ -51,9 +50,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.scruffyPicBox)).BeginInit();
             this.SuspendLayout();
             // 
+            // startButton
+            // 
+            this.startButton.Location = new System.Drawing.Point(331, 376);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(373, 133);
+            this.startButton.TabIndex = 7;
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // player1Ready
+            // 
+            this.player1Ready.AutoSize = true;
+            this.player1Ready.Location = new System.Drawing.Point(344, 665);
+            this.player1Ready.Name = "player1Ready";
+            this.player1Ready.Size = new System.Drawing.Size(57, 17);
+            this.player1Ready.TabIndex = 11;
+            this.player1Ready.Text = "Ready";
+            this.player1Ready.UseVisualStyleBackColor = true;
+            this.player1Ready.CheckedChanged += new System.EventHandler(this.player1Ready_CheckedChanged);
+            // 
             // versusPicBox
             // 
-            this.versusPicBox.Image = ((System.Drawing.Image)(resources.GetObject("versusPicBox.Image")));
             this.versusPicBox.Location = new System.Drawing.Point(405, 515);
             this.versusPicBox.Name = "versusPicBox";
             this.versusPicBox.Size = new System.Drawing.Size(220, 145);
@@ -63,7 +81,7 @@
             // 
             // player2PicBox
             // 
-            this.player2PicBox.Image = ((System.Drawing.Image)(resources.GetObject("player2PicBox.Image")));
+            this.player2PicBox.Image = global::MortyBattleSimulator.Properties.Resources.shadowMorty;
             this.player2PicBox.Location = new System.Drawing.Point(710, 376);
             this.player2PicBox.Name = "player2PicBox";
             this.player2PicBox.Size = new System.Drawing.Size(236, 370);
@@ -72,22 +90,13 @@
             // 
             // player1PicBox
             // 
-            this.player1PicBox.Image = ((System.Drawing.Image)(resources.GetObject("player1PicBox.Image")));
+            this.player1PicBox.ErrorImage = global::MortyBattleSimulator.Properties.Resources.shadowMorty;
+            this.player1PicBox.Image = global::MortyBattleSimulator.Properties.Resources.shadowMorty;
             this.player1PicBox.Location = new System.Drawing.Point(89, 376);
             this.player1PicBox.Name = "player1PicBox";
             this.player1PicBox.Size = new System.Drawing.Size(236, 370);
             this.player1PicBox.TabIndex = 8;
             this.player1PicBox.TabStop = false;
-            // 
-            // startButton
-            // 
-            this.startButton.Image = ((System.Drawing.Image)(resources.GetObject("startButton.Image")));
-            this.startButton.Location = new System.Drawing.Point(331, 376);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(373, 133);
-            this.startButton.TabIndex = 7;
-            this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // zombiePicBox
             // 
@@ -160,17 +169,6 @@
             this.scruffyPicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.scruffyPicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.scruffyPicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
-            // 
-            // player1Ready
-            // 
-            this.player1Ready.AutoSize = true;
-            this.player1Ready.Location = new System.Drawing.Point(344, 665);
-            this.player1Ready.Name = "player1Ready";
-            this.player1Ready.Size = new System.Drawing.Size(57, 17);
-            this.player1Ready.TabIndex = 11;
-            this.player1Ready.Text = "Ready";
-            this.player1Ready.UseVisualStyleBackColor = true;
-            this.player1Ready.CheckedChanged += new System.EventHandler(this.player1Ready_CheckedChanged);
             // 
             // Form1
             // 

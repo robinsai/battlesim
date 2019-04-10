@@ -17,7 +17,7 @@ namespace MortyBattleSimulator
         {
             InitializeComponent();
         }
-        Character[] OGMorty = new Character("OG Morty", OGPicBox.Image, OGMorty[]);
+       
         // Character[] Mortys
         bool toBeClick = true;
         bool toBeSelect = true;
@@ -119,7 +119,7 @@ namespace MortyBattleSimulator
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            CharacterMoves attacks = new CharacterMoves("Cry", 10);
+           
 
             OGMortyMoves = new CharacterMoves[] { Moves["Outburst"], Moves["Cry"], Moves["JuiceBox"], Moves["CallRick"] };
             ScruffyMortyMoves = new CharacterMoves[] { Moves["RetainStrength"], Moves["StareDown"], Moves["Cry"], Moves["Relax"] };
@@ -131,9 +131,18 @@ namespace MortyBattleSimulator
 
             playerBoxes = new PictureBox[2];
             mortys = new PictureBox[6];
-            Character[] characters = new Character[mortys.Length];
-            CharacterMoves[] attacksForScruffy = new CharacterMoves[4];
-            attacksForScruffy[0] = new CharacterMoves("Cry", 20);
+            Character[] characters = new Character[6];
+            //4-9-2019~~~~~~~~~dont forget to give them their unique moves
+             characters[0] = new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             characters[1]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             characters[2]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             characters[3]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             characters[4]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             characters[5]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
+             
+        
+            
+            
             //CharacterMoves[] attacksForScruffy = new CharacterMoves[4];
             //attacksForScruffy[0] = new CharacterMoves("Cry", 20);
             //  characters[0] = new Character("scruffyPicBox",mortys[0].Image,)
@@ -181,7 +190,7 @@ namespace MortyBattleSimulator
             {
                 Random computerRandomSelect = new Random(mortys.Length);
                // player2 = new Character(mortys[computerRandomSelect.Next(mortys.Length)].Image);
-                player2PicBox.Image = player2.playerImage;
+               // player2PicBox.Image = player2.playerImage;
 
                 BattleForm battleForm = new BattleForm(playerBoxes);
                 battleForm.Show();

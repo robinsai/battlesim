@@ -54,7 +54,6 @@
     </Compile>
     <Compile Include="CharacterAttacks.cs" />
     <Compile Include="CharacterMoves.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
@@ -69,6 +68,9 @@
       <DependentUpon>BattleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,13 +137,13 @@
     <None Include="Resources\scruffyback.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackSilhoutte.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\shadowMorty.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\thB5MM93TY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackSilhoutte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

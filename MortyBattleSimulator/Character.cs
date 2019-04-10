@@ -20,21 +20,22 @@ namespace MortyBattleSimulator
 
         public Character(string characterName, Image playerImage, CharacterMoves[] moves, int healthPoints = 100)
         {
-            this.moves = moves;
+            
             this.characterName = characterName;
             this.playerImage = playerImage;
             this.healthPoints = healthPoints;
-
-            for (int i = 0; i < moves.Length; i++)
-            {
-                Moves.Add(moves[i].nameOfAttack, moves[i]);
-            }
-
+            this.moves = moves;
+           
 
 
         }
+        
+        public void DoesMove()
+        {
 
-  //public void DoSomeAttack(string name, Character enemy)
+
+        }
+        //public void DoSomeAttack(string name, Character enemy)
         //{
         //    CharacterMoves chosenMove = Attacks[name];
         //    if(chosenMove.attackDebuffOrBuff == Enums.moves.attack)

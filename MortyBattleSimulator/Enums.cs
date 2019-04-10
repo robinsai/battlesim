@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace MortyBattleSimulator
 {
-   public static class Enums
+    public enum moves
     {
-        public enum moves
-        {
-            attack,
-            debuff,
-            buff
-
-        };
-
+        attack,
+        debuff,
+        buff
 
     }
 }
