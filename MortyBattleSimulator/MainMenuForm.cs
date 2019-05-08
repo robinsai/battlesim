@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MortyBattleSimulator
 {
-    public partial class Form1 : Form
+    public partial class MainMenuForm : Form
     {
-        public Form1()
+        public MainMenuForm()
         {
             InitializeComponent();
         }
@@ -209,6 +209,7 @@ namespace MortyBattleSimulator
             {
                 toBeSelect = false;
                 startButton.Visible = true;
+                versusPicBox.Visible = true;
             }
             else
             {

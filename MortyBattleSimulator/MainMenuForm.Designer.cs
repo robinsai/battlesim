@@ -1,6 +1,6 @@
 ﻿namespace MortyBattleSimulator
 {
-    partial class Form1
+    partial class MainMenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,7 @@
             // 
             // startButton
             // 
+            this.startButton.Image = global::MortyBattleSimulator.Properties.Resources.startButton;
             this.startButton.Location = new System.Drawing.Point(331, 376);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(373, 133);
@@ -72,6 +73,7 @@
             // 
             // versusPicBox
             // 
+            this.versusPicBox.Image = global::MortyBattleSimulator.Properties.Resources.VS;
             this.versusPicBox.Location = new System.Drawing.Point(405, 515);
             this.versusPicBox.Name = "versusPicBox";
             this.versusPicBox.Size = new System.Drawing.Size(220, 145);
@@ -170,7 +172,7 @@
             this.scruffyPicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.scruffyPicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
             // 
-            // Form1
+            // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +188,7 @@
             this.Controls.Add(this.karatePicBox);
             this.Controls.Add(this.hippiePicBox);
             this.Controls.Add(this.scruffyPicBox);
-            this.Name = "Form1";
+            this.Name = "MainMenuForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.versusPicBox)).EndInit();
