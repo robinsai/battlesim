@@ -213,6 +213,16 @@ namespace MortyBattleSimulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap versus_background_template_with_retro_style_7505_343 {
+            get {
+                object obj = ResourceManager.GetObject("versus_background_template_with_retro_style_7505_343", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VS {
             get {
                 object obj = ResourceManager.GetObject("VS", resourceCulture);

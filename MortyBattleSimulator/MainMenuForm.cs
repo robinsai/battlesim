@@ -17,13 +17,13 @@ namespace MortyBattleSimulator
         {
             InitializeComponent();
         }
-       
+
         // Character[] Mortys
         bool toBeClick = true;
         bool toBeSelect = true;
         bool playMenu = true;
-      //  PictureBox computerPlayer;
-       // Character player1;
+        //  PictureBox computerPlayer;
+        // Character player1;
         //Character player2;
         Size originalPlayer1PicBox = new Size(236, 370);
         PictureBox[] mortys;
@@ -82,28 +82,36 @@ namespace MortyBattleSimulator
                 //player1 = new Character(player1PicBox.Image);
             }
         }
-        void fighterSelectMenu(bool show)
+        void fighterSelectMenu(bool show,bool appearOnce)
         {
             if (show)
             {
                 appearFighters(mortys, playerBoxes);
-                versusPicBox.Visible = true;
+
             }
+            else
+            {
+                disappearFighters(mortys,appearOnce);
 
 
+            }
+        
         }
-        void disappearFighters(PictureBox[] pics, PictureBox[] playerbox)
+        void disappearFighters(PictureBox[] pics, bool appearOnce)
         {
             for (int i = 0; i < pics.Length; i++)
             {
                 pics[i].Visible = false;
 
             }
-            for (int i = 0; i < playerBoxes.Length; i++)
+            if (appearOnce)
             {
-                playerBoxes[i].Visible = false;
+                for (int i = 0; i < playerBoxes.Length; i++)
+                {
+                    playerBoxes[i].Visible = false;
+                }
+                appearOnce = false;
             }
-
 
         }
         void appearFighters(PictureBox[] mortyPics, PictureBox[] playerBoxes)
@@ -117,9 +125,11 @@ namespace MortyBattleSimulator
                 playerBoxes[i].Visible = true;
             }
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
            
+            bool gameStart = true;
 
             OGMortyMoves = new CharacterMoves[] { Moves["Outburst"], Moves["Cry"], Moves["JuiceBox"], Moves["CallRick"] };
             ScruffyMortyMoves = new CharacterMoves[] { Moves["RetainStrength"], Moves["StareDown"], Moves["Cry"], Moves["Relax"] };
@@ -133,16 +143,16 @@ namespace MortyBattleSimulator
             mortys = new PictureBox[6];
             Character[] characters = new Character[6];
             //4-9-2019~~~~~~~~~dont forget to give them their unique moves
-             characters[0] = new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             characters[1]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             characters[2]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             characters[3]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             characters[4]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             characters[5]= new Character("OGMorty",OGPicBox.Image,OGMortyMoves);
-             
-        
-            
-            
+            characters[0] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[1] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[2] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[3] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[4] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[5] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+
+
+
+
             //CharacterMoves[] attacksForScruffy = new CharacterMoves[4];
             //attacksForScruffy[0] = new CharacterMoves("Cry", 20);
             //  characters[0] = new Character("scruffyPicBox",mortys[0].Image,)
@@ -150,7 +160,7 @@ namespace MortyBattleSimulator
             {
                 mortys[i] = new PictureBox();
             }
-             for (int i = 0; i < playerBoxes.Length; i++)
+            for (int i = 0; i < playerBoxes.Length; i++)
             {
 
                 playerBoxes[i] = new PictureBox();
@@ -165,13 +175,13 @@ namespace MortyBattleSimulator
             mortys[4] = hippiePicBox;
             mortys[5] = zombiePicBox;
             playerBoxes[0] = player1PicBox;
-            playerBoxes[1] = player2PicBox;
-         
+            playerBoxes[1] = computerPicBox;
 
-          
-            
-         
-            disappearFighters(mortys,playerBoxes);
+
+
+
+
+            disappearFighters(mortys, gameStart);
             player1Ready.Visible = false;
         }
 
@@ -179,9 +189,15 @@ namespace MortyBattleSimulator
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            if (player1Ready.Checked)
+            {
+                BattleForm battleform = new BattleForm(playerBoxes);
+                battleform.Show();
+                
+            }
             if (playMenu)
             {
-                fighterSelectMenu(true);
+                fighterSelectMenu(true,true);
                 startButton.Visible = false;
                 player1Ready.Visible = true;
                 playMenu = false;
@@ -189,12 +205,12 @@ namespace MortyBattleSimulator
             else
             {
                 Random computerRandomSelect = new Random(mortys.Length);
-               // player2 = new Character(mortys[computerRandomSelect.Next(mortys.Length)].Image);
-               // player2PicBox.Image = player2.playerImage;
+                // player2 = new Character(mortys[computerRandomSelect.Next(mortys.Length)].Image);
+                // player2PicBox.Image = player2.playerImage;
 
                 BattleForm battleForm = new BattleForm(playerBoxes);
                 battleForm.Show();
-                    
+
             }
         }
 
@@ -207,14 +223,27 @@ namespace MortyBattleSimulator
         {
             if (player1Ready.Checked == true)
             {
+                Random ran = new Random();
+                int selectedRandom = ran.Next(0, mortys.Length);
+                computerPicBox.Image = mortys[selectedRandom].Image;
+                computerPicBox.Visible = true;
                 toBeSelect = false;
                 startButton.Visible = true;
                 versusPicBox.Visible = true;
+                fighterSelectMenu(false,false);
             }
             else
             {
+                fighterSelectMenu(true, true);
                 toBeSelect = true;
+                startButton.Visible = false;
+                versusPicBox.Visible = false;
             }
+
+        }
+
+        private void ComputerPicBox_Click(object sender, EventArgs e)
+        {
 
         }
     }
