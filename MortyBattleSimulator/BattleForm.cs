@@ -14,25 +14,38 @@ namespace MortyBattleSimulator
     {
         PictureBox[] playerBoxes;
         Dictionary<string, int> attack = new Dictionary<string, int>();
-        
+        Character Player1;
+        Character Player2;
 
-        public BattleForm(PictureBox[] playerBoxesFromPreviousForm)
+        public BattleForm(PictureBox[] playerBoxesFromPreviousForm,Character player1, Character player2)
         {
             playerBoxes = playerBoxesFromPreviousForm;
-         
-              comboBox1.SelectedItem = "";
+            Player1 = player1;
+            Player2 = player2;
+             
             InitializeComponent();
         }
         
         private void BattleForm_Load(object sender, EventArgs e)
         {
-
-            attack.Add("cry", 10);
-            comboBox1.Items.Contains("cry");
-            for (int i = 0; i < comboBox1.Items.Count; i++)
+           
+            for (int i = 0; i < 4; i++)
             {
-                attack.Add(comboBox1.Items[i].ToString(), 10);
+                if (!attack.ContainsKey(Player1.nameOfMoves(i)))
+                {
+                    attack.Add(Player1.nameOfMoves(i), Player1.valueOfMove(i));
+                  
+                }
+                if (!attack.ContainsKey(Player2.nameOfMoves(i)))
+                {
+                    attack.Add(Player2.nameOfMoves(i), Player2.valueOfMove(i));
+                }
+               
+                listOfComputerAttackBox.Items.Add(Player2.nameOfMoves(i));
+                listOfUserComboBox.Items.Add(Player1.nameOfMoves(i));
             }
+
+        
 
             //attack["cry"]
         }

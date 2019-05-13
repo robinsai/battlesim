@@ -18,13 +18,14 @@ namespace MortyBattleSimulator
             InitializeComponent();
         }
 
+        Character[] characters = new Character[6];
         // Character[] Mortys
         bool toBeClick = true;
         bool toBeSelect = true;
         bool playMenu = true;
         //  PictureBox computerPlayer;
-        // Character player1;
-        //Character player2;
+         Character player1;
+        Character player2;
         Size originalPlayer1PicBox = new Size(236, 370);
         PictureBox[] mortys;
         PictureBox[] playerBoxes;
@@ -48,7 +49,7 @@ namespace MortyBattleSimulator
         CharacterMoves[] OGMortyMoves;
         CharacterMoves[] ScruffyMortyMoves;
         CharacterMoves[] GhostMortyMoves;
-        CharacterMoves[] HippeMortyMoves;
+        CharacterMoves[] HippieMortyMoves;
         CharacterMoves[] KarateMortyMoves;
         CharacterMoves[] ZombieMortyMoves;
         void settingPictureSizeToDefault(PictureBox pics)
@@ -79,7 +80,8 @@ namespace MortyBattleSimulator
             {
                 PictureBox pictureBox = (PictureBox)sender;
                 player1PicBox.Image = pictureBox.Image;
-                //player1 = new Character(player1PicBox.Image);
+                player1 = characters[Convert.ToInt32(pictureBox.Tag)];
+              
             }
         }
         void fighterSelectMenu(bool show,bool appearOnce)
@@ -134,21 +136,21 @@ namespace MortyBattleSimulator
             OGMortyMoves = new CharacterMoves[] { Moves["Outburst"], Moves["Cry"], Moves["JuiceBox"], Moves["CallRick"] };
             ScruffyMortyMoves = new CharacterMoves[] { Moves["RetainStrength"], Moves["StareDown"], Moves["Cry"], Moves["Relax"] };
             GhostMortyMoves = new CharacterMoves[] { Moves["StareDown"], Moves["Dig"], Moves["Provoke"], Moves["Outburst"] };
-            HippeMortyMoves = new CharacterMoves[] { Moves["FlowerChild"], Moves["CallJerry"], Moves["Provoke"], Moves["JuiceBox"] };
+            HippieMortyMoves = new CharacterMoves[] { Moves["FlowerChild"], Moves["CallJerry"], Moves["Provoke"], Moves["JuiceBox"] };
             KarateMortyMoves = new CharacterMoves[] { Moves["KarateChop"], Moves["StareDown"], Moves["CallRick"], Moves["Flail"] };
             ZombieMortyMoves = new CharacterMoves[] { Moves["Dig"], Moves["Cry"], Moves["StareDown"], Moves["Outburst"] };
 
 
             playerBoxes = new PictureBox[2];
             mortys = new PictureBox[6];
-            Character[] characters = new Character[6];
-            //4-9-2019~~~~~~~~~dont forget to give them their unique moves
+            
+           
             characters[0] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
-            characters[1] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
-            characters[2] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
-            characters[3] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
-            characters[4] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
-            characters[5] = new Character("OGMorty", OGPicBox.Image, OGMortyMoves);
+            characters[1] = new Character("ScruffyMorty", scruffyPicBox.Image, ScruffyMortyMoves);
+            characters[2] = new Character("GhostMorty", ghostPicBox.Image, GhostMortyMoves);
+            characters[3] = new Character("HippieMorty", hippiePicBox.Image, HippieMortyMoves);
+            characters[4] = new Character("KarateMorty", karatePicBox.Image, KarateMortyMoves);
+            characters[5] = new Character("ZombieMorty", zombiePicBox.Image, ZombieMortyMoves);
 
 
 
@@ -191,7 +193,8 @@ namespace MortyBattleSimulator
         {
             if (player1Ready.Checked)
             {
-                BattleForm battleform = new BattleForm(playerBoxes);
+
+                BattleForm battleform = new BattleForm(playerBoxes,player1,player2);
                 battleform.Show();
                 
             }
@@ -208,7 +211,7 @@ namespace MortyBattleSimulator
                 // player2 = new Character(mortys[computerRandomSelect.Next(mortys.Length)].Image);
                 // player2PicBox.Image = player2.playerImage;
 
-                BattleForm battleForm = new BattleForm(playerBoxes);
+                BattleForm battleForm = new BattleForm(playerBoxes,player1,player2);
                 battleForm.Show();
 
             }
@@ -225,6 +228,7 @@ namespace MortyBattleSimulator
             {
                 Random ran = new Random();
                 int selectedRandom = ran.Next(0, mortys.Length);
+                player2 = characters[selectedRandom];
                 computerPicBox.Image = mortys[selectedRandom].Image;
                 computerPicBox.Visible = true;
                 toBeSelect = false;

@@ -29,7 +29,15 @@ namespace MortyBattleSimulator
 
 
         }
-        
+        public string nameOfMoves(int i)
+        {
+            string name = moves[i].nameOfAttack;
+            return name;
+        }
+        public int valueOfMove(int i)
+        {
+            return moves[i].value;
+        }
         public void DoesMove()
         {
 

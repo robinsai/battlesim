@@ -9,7 +9,7 @@ namespace MortyBattleSimulator
     public struct CharacterMoves
     {  
         public string nameOfAttack;
-        int value;
+        public int value;
         public moves attackDebuffOrBuff;
 
         public CharacterMoves(moves move,string nameOfAttack, int value)

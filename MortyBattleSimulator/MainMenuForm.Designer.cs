@@ -109,6 +109,7 @@
             this.zombiePicBox.Size = new System.Drawing.Size(148, 370);
             this.zombiePicBox.TabIndex = 5;
             this.zombiePicBox.TabStop = false;
+            this.zombiePicBox.Tag = "5";
             this.zombiePicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.zombiePicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.zombiePicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
@@ -121,6 +122,7 @@
             this.ghostPicBox.Size = new System.Drawing.Size(154, 370);
             this.ghostPicBox.TabIndex = 4;
             this.ghostPicBox.TabStop = false;
+            this.ghostPicBox.Tag = "1";
             this.ghostPicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.ghostPicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.ghostPicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
@@ -133,6 +135,7 @@
             this.OGPicBox.Size = new System.Drawing.Size(165, 370);
             this.OGPicBox.TabIndex = 3;
             this.OGPicBox.TabStop = false;
+            this.OGPicBox.Tag = "2";
             this.OGPicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.OGPicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.OGPicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
@@ -145,6 +148,7 @@
             this.karatePicBox.Size = new System.Drawing.Size(202, 370);
             this.karatePicBox.TabIndex = 2;
             this.karatePicBox.TabStop = false;
+            this.karatePicBox.Tag = "3";
             this.karatePicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.karatePicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.karatePicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
@@ -157,6 +161,7 @@
             this.hippiePicBox.Size = new System.Drawing.Size(154, 370);
             this.hippiePicBox.TabIndex = 1;
             this.hippiePicBox.TabStop = false;
+            this.hippiePicBox.Tag = "4";
             this.hippiePicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.hippiePicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.hippiePicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);
@@ -169,6 +174,7 @@
             this.scruffyPicBox.Size = new System.Drawing.Size(165, 370);
             this.scruffyPicBox.TabIndex = 0;
             this.scruffyPicBox.TabStop = false;
+            this.scruffyPicBox.Tag = "0";
             this.scruffyPicBox.Click += new System.EventHandler(this.clickOnCharacter);
             this.scruffyPicBox.MouseEnter += new System.EventHandler(this.hoverOverPicture);
             this.scruffyPicBox.MouseLeave += new System.EventHandler(this.hoverAwayPicture);

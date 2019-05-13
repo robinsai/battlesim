@@ -35,8 +35,8 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.player2Label = new System.Windows.Forms.Label();
             this.player1Label = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.listOfComputerAttackBox = new System.Windows.Forms.ComboBox();
+            this.listOfUserComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.player1PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2PicBox)).BeginInit();
             this.SuspendLayout();
@@ -91,39 +91,39 @@
             this.player1Label.TabIndex = 5;
             this.player1Label.Text = "label2";
             // 
-            // comboBox1
+            // listOfComputerAttackBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.listOfComputerAttackBox.FormattingEnabled = true;
+            this.listOfComputerAttackBox.Items.AddRange(new object[] {
             "Bite",
             "Whine",
             "Arm Flail",
             "Cry"});
-            this.comboBox1.Location = new System.Drawing.Point(426, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 21);
-            this.comboBox1.TabIndex = 6;
+            this.listOfComputerAttackBox.Location = new System.Drawing.Point(426, 47);
+            this.listOfComputerAttackBox.Name = "listOfComputerAttackBox";
+            this.listOfComputerAttackBox.Size = new System.Drawing.Size(165, 21);
+            this.listOfComputerAttackBox.TabIndex = 6;
             // 
-            // comboBox2
+            // listOfUserComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.listOfUserComboBox.FormattingEnabled = true;
+            this.listOfUserComboBox.Items.AddRange(new object[] {
             "Bite",
             "Whine",
             "Arm Flail",
             "Cry"});
-            this.comboBox2.Location = new System.Drawing.Point(426, 530);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(165, 21);
-            this.comboBox2.TabIndex = 7;
+            this.listOfUserComboBox.Location = new System.Drawing.Point(426, 530);
+            this.listOfUserComboBox.Name = "listOfUserComboBox";
+            this.listOfUserComboBox.Size = new System.Drawing.Size(165, 21);
+            this.listOfUserComboBox.TabIndex = 7;
             // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 598);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.listOfUserComboBox);
+            this.Controls.Add(this.listOfComputerAttackBox);
             this.Controls.Add(this.player1Label);
             this.Controls.Add(this.player2Label);
             this.Controls.Add(this.progressBar2);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label player2Label;
         private System.Windows.Forms.Label player1Label;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox listOfComputerAttackBox;
+        private System.Windows.Forms.ComboBox listOfUserComboBox;
     }
 }
