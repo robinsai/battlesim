@@ -12,7 +12,7 @@ namespace MortyBattleSimulator
 
         public Image playerImage;
         int healthPoints;
-        string characterName;
+        public string Name;
         CharacterMoves[] moves;
 
         Dictionary<string, Func<string, int>> Accounts = new Dictionary<string, Func<string, int>>();
@@ -21,7 +21,7 @@ namespace MortyBattleSimulator
         public Character(string characterName, Image playerImage, CharacterMoves[] moves, int healthPoints = 100)
         {
             
-            this.characterName = characterName;
+            this.Name = characterName;
             this.playerImage = playerImage;
             this.healthPoints = healthPoints;
             this.moves = moves;

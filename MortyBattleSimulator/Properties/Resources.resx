@@ -130,8 +130,14 @@
   <data name="startButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="versus_background_template_with_retro_style_7505_343" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\versus-background-template-with-retro-style_7505-343.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shadowMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shadowMorty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frontAncientMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +151,14 @@
   <data name="frontKarateMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frontKarateMorty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backKarateMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backkarate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BackOGMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackOGMorty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thB5MM93TY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thB5MM93TY.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backGhostMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frontScruffyMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frontscruffy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,13 +166,10 @@
   <data name="FrontHippyMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FrontHippyMorty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backGhostMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backKarateMorty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backkarate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="versus_background_template_with_retro_style_7505_343" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\versus-background-template-with-retro-style_7505-343.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Attack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -22,13 +22,15 @@ namespace MortyBattleSimulator
             playerBoxes = playerBoxesFromPreviousForm;
             Player1 = player1;
             Player2 = player2;
-             
+            
             InitializeComponent();
         }
         
         private void BattleForm_Load(object sender, EventArgs e)
         {
-           
+            player1PicBox.Image = playerBoxes[0].Image;
+            player2PicBox.Image = playerBoxes[1].Image;
+            player2Label.Text = Player2.Name;
             for (int i = 0; i < 4; i++)
             {
                 if (!attack.ContainsKey(Player1.nameOfMoves(i)))

@@ -210,10 +210,10 @@ namespace MortyBattleSimulator
                 Random computerRandomSelect = new Random(mortys.Length);
                 // player2 = new Character(mortys[computerRandomSelect.Next(mortys.Length)].Image);
                 // player2PicBox.Image = player2.playerImage;
-
+                /*
                 BattleForm battleForm = new BattleForm(playerBoxes,player1,player2);
                 battleForm.Show();
-
+                */
             }
         }
 
@@ -222,7 +222,7 @@ namespace MortyBattleSimulator
          * 
          */
 
-        private void player1Ready_CheckedChanged(object sender, EventArgs e)
+                private void player1Ready_CheckedChanged(object sender, EventArgs e)
         {
             if (player1Ready.Checked == true)
             {

@@ -152,5 +152,9 @@
   <ItemGroup>
     <None Include="Resources\versus-background-template-with-retro-style_7505-343.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Attack.png" />
+    <None Include="Resources\Attack1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
