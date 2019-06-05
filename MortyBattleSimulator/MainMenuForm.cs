@@ -33,17 +33,17 @@ namespace MortyBattleSimulator
         Dictionary<string, CharacterMoves> Moves = new Dictionary<string, CharacterMoves>()
             {
                 {  "Outburst", new CharacterMoves(moves.attack, "Outburst", 20) },
-                {"Cry", new CharacterMoves(moves.debuff,"Cry",15) },
+                {"Cry", new CharacterMoves(moves.debuff,"Cry",-15) },
                 {"Flail",  new CharacterMoves(moves.attack,"Flail",20)  },
-                {"JuiceBox",  new CharacterMoves(moves.buff,"JuiceBox",20)    },
-                {"Provoke",  new CharacterMoves(moves.debuff,"Provoke", 15) },
+                {"JuiceBox",  new CharacterMoves(moves.heal,"JuiceBox",20)    },
+                {"Provoke",  new CharacterMoves(moves.debuff,"Provoke", -15) },
                 {"KarateChop",  new CharacterMoves(moves.attack,"KarateChop",20) },
-                {"StareDown",  new CharacterMoves(moves.debuff,"StareDown", 15) },
+                {"StareDown",  new CharacterMoves(moves.debuff,"StareDown", -15) },
                 {"RetainStrength",  new CharacterMoves(moves.buff,"RetainStrength",20) },
-                {"CallJerry",  new CharacterMoves(moves.debuff,"CallJerry",20) },
+                {"CallJerry",  new CharacterMoves(moves.debuff,"CallJerry",-20) },
                 {"FlowerChild",  new CharacterMoves(moves.buff,"FlowerChild",15) },
                 {"Dig",  new CharacterMoves(moves.buff,"Dig",15) },
-                {"Relax",  new CharacterMoves(moves.buff,"Relax,",20) },
+                {"Relax",  new CharacterMoves(moves.heal,"Relax,",20) },
                 {"CallRick",  new CharacterMoves(moves.buff,"CallRick",100) }
             };
         CharacterMoves[] OGMortyMoves;

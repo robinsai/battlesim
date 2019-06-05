@@ -154,6 +154,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Attack.png" />
+    <None Include="Resources\game over.jpg" />
+    <None Include="Resources\game over.bmp" />
     <None Include="Resources\Attack1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

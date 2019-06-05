@@ -10,7 +10,8 @@ namespace MortyBattleSimulator
     {
         attack,
         debuff,
-        buff
+        buff,
+        heal
 
     }
 }

@@ -13,7 +13,7 @@ namespace MortyBattleSimulator
         public Image playerImage;
         int healthPoints;
         public string Name;
-        CharacterMoves[] moves;
+        public  CharacterMoves[] moves;
 
         Dictionary<string, Func<string, int>> Accounts = new Dictionary<string, Func<string, int>>();
         // Accounts.Add("Cry", Attacks);
